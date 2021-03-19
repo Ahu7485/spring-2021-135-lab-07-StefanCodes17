@@ -1,16 +1,14 @@
-main: main.o funcs.o
-	g++ -o main main.o funcs.o
+main: main.o editor.o
+	g++ -o main main.o editor.o
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
+tests: tests.o editor.o
+	g++ -o tests tests.o editor.o
 
+editor.o: editor.cpp editor.h
 
+main.o: main.cpp editor.h
 
-funcs.o: funcs.cpp funcs.h
-
-main.o: main.cpp funcs.h
-
-tests.o: tests.cpp doctest.h funcs.h
+tests.o: tests.cpp doctest.h editor.h
 
 clean:
-	rm -f main.o funcs.o tests.o
+	rm -f main.o editor.o tests.o
