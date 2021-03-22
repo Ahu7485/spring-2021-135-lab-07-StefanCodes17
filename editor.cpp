@@ -1,5 +1,6 @@
 #include <iostream>
 #include "editor.h"
+#include <cctype>
 using namespace std;
 
 string removeLeadingSpaces(string line)
