@@ -11,4 +11,4 @@ main.o: main.cpp editor.h
 tests.o: tests.cpp doctest.h editor.h
 
 clean:
-	rm -f main.o editor.o tests.o
+	rm -f main.o editor.o tests.o main tests
